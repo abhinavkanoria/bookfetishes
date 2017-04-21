@@ -1,0 +1,360 @@
+<html ng-app= "Signin">
+<head>
+<title> Department of Computer Science, DTU</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="sign.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="sign.js"> </script>
+<link rel="stylesheet" href="css/style.css"/>
+<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
+ <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+ 
+
+<style>
+.scroll{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left:-5px;
+ 
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(999,999,999,0);
+  text-align: center;
+  min-height: 25%;
+    height: 25%;
+ 
+   width:100%;
+
+   background-color:#1abc9c;
+   border-radius: 10% 10% 10% 10%;
+
+   margin-bottom: 18px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+ -webkit-transition:all 2s;
+    transition: all 2s;
+  padding:10%;
+z-index:2;
+
+}
+.scroll:hover{ height: 50%;
+               color: rgba(999,999,999,1);}
+</style>
+<script>
+
+$(document).ready(function() {
+
+$('a[href*=#]').each(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+&amp;amp;&amp;amp; location.hostname == this.hostname
+&amp;amp;&amp;amp; this.hash.replace(/#/,'') ) {
+var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+if ($target) {
+var targetOffset = $target.offset().top;
+$(this).click(function() {
+$("#nav li a").removeClass("active");
+$(this).addClass('active');
+$('html, body').animate({scrollTop: targetOffset}, 1000);
+return false;
+});
+}
+}
+});
+
+});</script>
+
+
+</head>
+<body>
+
+<!--
+<div class="scroll"></div>
+<div class="scroll"></div>
+<div class="scroll"></div>
+<div class="scroll"></div>
+width: 0;
+
+  margin-top:-5em;
+  height: 100px;
+  border: 50px solid #1abc9c;
+  border-top: 0 solid;
+  border-bottom: 30px solid rgba(0,0,0,0);
+-->
+
+
+
+  <nav class="navbar navbar-inverse headercss">
+
+    <div class="navbar-header" style="padding:10px">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav"style="padding:10px">
+      <li class="active" ><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Book Blog</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <div style="padding:10px; float:right"  ng-controller="TabController as t">
+    <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal" ng-click="t.setTab(1)"> SignUp</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="t.setTab(2)">Login</button>
+
+
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" >
+      <div >
+        <div class="modal-header" >
+
+         <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+
+          <ul class="nav nav-pills" >
+
+             <li style="width:49%" ng-class="{ active:t.isSet(1) }"><a href ng-click="t.setTab(1)">SignUp</a></li>
+             <li style="width:49%" ng-class="{ active:t.isSet(2) }"><a href ng-click="t.setTab(2)">Login</a></li>
+          </ul>
+        </div>
+        <div class="modal-body" id="sign-in" ng-show="t.isSet(1)">
+           <div class="omb_login">
+
+    <div class="row omb_row-sm-offset-3 omb_socialButtons">
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+              <i class="fa fa-facebook fa-2x"></i>
+             <span class="hidden-xs"></span>
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-google">
+              <i class="fa fa-google-plus fa-2x"></i>
+            <span class="hidden-xs"></span>
+            </a>
+          </div>
+    </div>
+
+    <div class="row omb_row-sm-offset-3 omb_loginOr">
+      <div class="col-xs-12 col-sm-6">
+        <hr class="omb_hrOr">
+        <span class="omb_spanOr">or</span>
+      </div>
+    </div>
+
+    <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-12 col-sm-6">
+          <form class="new_user" id="new_user" action="/users/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="J88DigwCGiPEi7y6LtZZ3l93ynkibFNEwceoB2j/aV9aKf0oEBYpQuEH08N0Su/UkPu1GA8Jz1Xi2wMmT+nrbA==" />
+      <input type="hidden" id="invite_code" name="user[invite_code]" value="">
+      <input type="hidden" id="user_timezone" name="user[timezone]">
+
+      <div class="form-group">
+        <input id="user_fname" name="user[fname]" type="name" value="" class="form-control" placeholder="Firstname" required="">
+      </div>
+      
+      <div class="form-group">
+        <input id="user_lname" name="user[lname]" type="name" value="" class="form-control" placeholder="Lastname" required="">
+      </div>
+
+      <div class="form-group">
+        <input id="user_email" name="user[email]" type="email" value="" class="form-control" placeholder="Email" required="">
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="username" name="user[username]" value="" class="form-control" placeholder="Username(only alphanumerics, hypen and dot)" required="">
+      </div>
+
+      <div class="form-group">
+        <input autocomplete="off" id="user_password" name="user[password]" type="password" class="form-control" placeholder="Password (8 characters minimum)"
+               pattern=".{8,}" required=""
+               title="Password must contain at least 8 characters."
+               onchange="form.user_password_confirmation.pattern = this.value;">
+      </div>
+      <div class="form-group">
+        <input autocomplete="off"
+               id="user_password_confirmation"
+               name="user[password_confirmation]"
+               type="password" pattern=".{8,}"
+               class="form-control"
+               placeholder="Retype Password"
+               required=""
+               title="Please enter the same Password as above.">
+      </div>
+
+      <div>
+         <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      </div>
+      <div class="clearfix"></div>
+</form>
+      </div>
+      </div>
+
+  </div>
+
+      </div>
+
+      <div class="clearfix"></div>
+</form>  <br/>
+
+        </div>
+        <div class="modal-body" id="sign-in" ng-show="t.isSet(2)">
+         <div class="omb_login">
+
+    <div class="row omb_row-sm-offset-3 omb_socialButtons">
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+              <i class="fa fa-facebook fa-2x"></i>
+             <span class="hidden-xs"></span>
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-google">
+              <i class="fa fa-google-plus fa-2x"></i>
+            <span class="hidden-xs"></span>
+            </a>
+          </div>
+    </div>
+
+    <div class="row omb_row-sm-offset-3 omb_loginOr">
+      <div class="col-xs-12 col-sm-6">
+        <hr class="omb_hrOr">
+        <span class="omb_spanOr">or</span>
+      </div>
+    </div>
+
+    <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-12 col-sm-6">
+          <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control" name="username" placeholder="email address">
+          </div>
+          <span class="help-block"></span>
+
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <input  type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+                    <span class="help-block">Password error</span>
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </form>
+      </div>
+      </div>
+    <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-12 col-sm-3">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me">Remember Me
+        </label>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <p class="omb_forgotPwd">
+          <a href="#">Forgot password?</a>
+        </p>
+      </div>
+    </div>
+  </div>
+        </div>
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div> </div></div></nav>
+  <!--
+  <button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button>  -->
+
+<div class="container-fluid" style="margin:20px">
+
+  <div class="row content" id="slide1">
+   
+    <div class="col-sm-12" style="background-color:rgba(0,0,0,0);padding-top:100px ">
+<!--
+     <div class="col-sm-3"><div class="scroll">About Us</div></div>
+     <div class="col-sm-3"><div class="scroll">Book Blog</div></div>
+     <div class="col-sm-3"><div class="scroll">Services</div></div>
+     <div class="col-sm-3"><div class="scroll">Contact Us</div>--><div class="jumbotron">
+    <h1>Book Fetishes</h1>
+    <p>One stop heaven for book lovers across the country.</p></div>
+
+
+        <div class="col-sm-2"><div class="scroll">Home</div></div>
+        <div class="col-sm-2"><div class="scroll">About Us</div></div>
+         <div class="col-sm-2"> <div class="scroll">Book Blog</div></div>
+       <div class="col-sm-2"> <div class="scroll">Services</div></div>
+        <div class="col-sm-2"><div class="scroll">Contact Us</div></div>
+    <div class="col-sm-2"><div class="scroll">Contact Us</div></div>
+   
+</div></div>
+   
+<!--
+ <div class="content">
+
+ <div id="christmas_tree"> </div>
+ <div id="snowflakes1"></div>
+ <div id="snowflakes2"></div>
+ <h2>MERRY</h2>
+ <h1>CHRISTMAS</h1>
+ <div id="divider"> </div>
+ <h3>HAPPY NEW YEAR </h3>
+ <div id="ribbon"></div>
+ <div id="new_year"> </div>
+ </div> -->
+
+ <div id="slide2">
+ 
+ <div class="quotes_container">
+<!--here the contect of about us goes, I hope you can do this yourself-->
+<!--
+ <h3 class="quotes">“Then the Grinch thought of something he hadn't before! What if Christmas, he thought, doesn't come from a store. What if Christmas...perhaps...means a little bit more!”</h3>
+ <img src="images/gem-01.gif" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+ </div> 
+ </div> 
+
+ <div id="slide3">
+
+ <div class="quotes_container">
+<!--here the contect of book blog goes, I hope you can do this yourself-->
+<!--
+ <h3 class="quotes">“I truly believe that if we keep telling the Christmas story, singing the Christmas songs, and living the Christmas spirit, we can bring joy and happiness and peace to this world.” </h3>
+ <img src="images/gem-02.gif" align="left"/> <h4 class="author_name_white">Norman Vincent Peale </h4>-->
+ </div> 
+ </div> 
+  
+ <div id="slide4">
+ 
+ <div class="quotes_container">
+<!--here the contect of services goes, I hope you can do this yourself-->
+<!-- <h3 class="quotes">“Christmas doesn't come from a store, maybe Christmas perhaps means a little bit more....” </h3>
+ <img src="images/gem-03.gif" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+ </div> 
+ </div> 
+ 
+ <div id="slide5">
+
+ <div class="quotes_container">
+<!--here the contect of contact us goes, I hope you can do this yourself-->
+ <!--<h3 class="quotes">“My idea of Christmas, whether old-fashioned or modern, is very simple: loving others. Come to think of it, why do we have to wait for Christmas to do that?” </h3>
+ <img src="images/gem-04.gif" align="left"/> <h4 class="author_name_white">Bob Hope </h4>-->
+ 
+ </div> 
+ </div> 
+</body></html>
