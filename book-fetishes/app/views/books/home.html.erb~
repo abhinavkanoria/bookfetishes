@@ -1,0 +1,98 @@
+
+<html>
+<head>
+<title> Department of Computer Science, DTU</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="sign.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="sign.js"> </script>
+<link rel="stylesheet" href="css/style.css"/>
+<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+
+ <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
+ <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+
+<div class="container-fluid" style="margin:20px">
+
+  <div class="row content" id="slide1">
+   
+    <div class="col-sm-12" style="background-color:rgba(0,0,0,0);padding-top:100px ">
+<!--
+     <div class="col-sm-3"><div class="scroll">About Us</div></div>
+     <div class="col-sm-3"><div class="scroll">Book Blog</div></div>
+     <div class="col-sm-3"><div class="scroll">Services</div></div>
+     <div class="col-sm-3"><div class="scroll">Contact Us</div>--><div class="jumbotron">
+    <h1>Book Fetishes</h1>
+    <p>One stop heaven for book lovers across the country.</p></div>
+
+
+        <div class="col-sm-2"><div class="scroll">Home</div></div>
+        <div class="col-sm-2"><div class="scroll">About Us</div></div>
+         <div class="col-sm-2"> <div class="scroll">Book Blog</div></div>
+       <div class="col-sm-2"> <div class="scroll">Services</div></div>
+        <div class="col-sm-2"><div class="scroll">Contact Us</div></div>
+    <div class="col-sm-2"><div class="scroll">Contact Us</div></div>
+   
+</div></div>
+   
+<!--
+ <div class="content">
+
+ <div id="christmas_tree"> </div>
+ <div id="snowflakes1"></div>
+ <div id="snowflakes2"></div>
+ <h2>MERRY</h2>
+ <h1>CHRISTMAS</h1>
+ <div id="divider"> </div>
+ <h3>HAPPY NEW YEAR </h3>
+ <div id="ribbon"></div>
+ <div id="new_year"> </div>
+ </div> -->
+
+ <div id="slide2">
+ 
+ <div class="quotes_container">
+<!--here the contect of about us goes, I hope you can do this yourself-->
+<!--
+ <h3 class="quotes">“Then the Grinch thought of something he hadn't before! What if Christmas, he thought, doesn't come from a store. What if Christmas...perhaps...means a little bit more!”</h3>
+ <img src="images/gem-01.gif" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+ </div> 
+ </div> 
+
+ <div id="slide3">
+
+ <div class="quotes_container">
+<!--here the contect of book blog goes, I hope you can do this yourself-->
+<!--
+ <h3 class="quotes">“I truly believe that if we keep telling the Christmas story, singing the Christmas songs, and living the Christmas spirit, we can bring joy and happiness and peace to this world.” </h3>
+ <img src="images/gem-02.gif" align="left"/> <h4 class="author_name_white">Norman Vincent Peale </h4>-->
+ </div> 
+ </div> 
+  
+ <div id="slide4">
+ 
+ <div class="quotes_container">
+<!--here the contect of services goes, I hope you can do this yourself-->
+<!-- <h3 class="quotes">“Christmas doesn't come from a store, maybe Christmas perhaps means a little bit more....” </h3>
+ <img src="images/gem-03.gif" align="left"/> <h4 class="author_name_gray">Dr. Seuss </h4>-->
+ </div> 
+ </div> 
+ 
+ <div id="slide5">
+
+ <div class="quotes_container">
+<!--here the contect of contact us goes, I hope you can do this yourself-->
+ <!--<h3 class="quotes">“My idea of Christmas, whether old-fashioned or modern, is very simple: loving others. Come to think of it, why do we have to wait for Christmas to do that?” </h3>
+ <img src="images/gem-04.gif" align="left"/> <h4 class="author_name_white">Bob Hope </h4>-->
+ 
+ </div> 
+ </div> 
+</body></html>
