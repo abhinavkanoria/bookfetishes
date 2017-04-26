@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" ng-app= "Signin">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+   <link rel="stylesheet" href="sign.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <script type="text/javascript" src="angular.min.js"></script>
+ 
+ <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+ 
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+
+    <div class="navbar-header" style="padding:10px">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav" style="padding:10px">
+      <li class="active" ><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Book Blog</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <div style="padding:10px; float:right"  ng-controller="TabController as t">
+    
+      <a class="navbar-brand" href="#">Full Name</a>
+  
+</div></nav>
+
+<div class="container" >
+ 
+	<div class="col-sm-3" style="border-color: blue">
+	<div  style="background-color: blue; height:100%">
+		
+		 <img src="images/gem-01.gif" class="img-circle" alt="Cinque Terre" width="50%" height="50%" style="margin-left:25%; margin-right:25%; margin-top:10%;margin-bottom:10%">
+		 <center><span style="color:white; font-size: 150%" >FULL NAME</span></center>
+		 <center><span style="color:white; font-size: 120%" >username</span></center> 
+          <center><button class="follow-btn btn btn-default">Edit</button></center> 
+		  <hr class="omb_hrOr" width="80%">
+		  <center><span style="color:white; font-size: 120%" >Books  Read:</span></center> 
+                  <br>
+                  <center><span style="color:white; font-size: 120%" >Books  Partially Read:</span></center>
+                  <br>
+                     <center><span style="color:white; font-size: 120%" >Books  Reviewed:</span></center> 
+                   <br>
+
+
+		  
+
+	</div></div>
+      
+      <div class="col-sm-9 " style="background-color: green;">
+        <div class="row">
+         <div class=" col-sm-5"> <center><span style="color:white; font-size: 150%" >Books Recently Read</span></center></div>
+         <div class=" col-sm-2"><td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td></div>
+         <div class=" col-sm-5 table-responsive">          
+           <table class="table">
+            <tbody>
+               <tr>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>       
+              </tr>
+              <tr>
+ <td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+              </tr>
+            </tbody>
+           </table>
+         </div>
+       </div>
+<div class="row">
+ <div class=" col-sm-5 table-responsive">          
+  <table class="table">
+    
+    <tbody>
+      <tr>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+
+
+
+       
+      </tr>
+ <tr>
+ <td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+         <div class=" col-sm-2"><td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td></div>
+         <div class=" col-sm-5"> <center><span style="color:white; font-size: 150%;display:flex" >Books Recently Reviewed</span></center></div></div>
+
+
+        <div class="row">
+         <div class=" col-sm-5"> <center><span style="color:white; font-size: 150%;display:flex" >Books Currently Reading</span></center></div>
+         <div class=" col-sm-2"><td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td></div>
+         <div class=" col-sm-5 table-responsive">          
+           <table class="table">
+            <tbody>
+               <tr>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>       
+              </tr>
+              <tr>
+ <td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+<td> <img src="images/gem-01.gif" class="img-thumbnail" alt="Cinque Terre" width="100%" height="150%" style=" margin-top:10%;margin-bottom:10%"></td>
+              </tr>
+            </tbody>
+           </table>
+         </div>
+       </div>
+
+
+
+            </div>
+
+</div></body></html>

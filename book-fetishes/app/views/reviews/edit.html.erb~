@@ -1,0 +1,9 @@
+<H1>Edit Review</H1>
+
+<%= simple_form_for([@book, @review]) do |f| %>
+	<div id="rating-form">
+		<label>Rating</label>
+	</div>
+	<%= f.input :comment %>
+	<%= f.button :submit %>
+<% end %>

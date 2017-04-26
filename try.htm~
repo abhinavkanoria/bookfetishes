@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>li{color:white'
+}</style>
+<nav class="navbar navbar-inverse headercss">
+
+    <div class="navbar-header" style="padding:10px">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav"style="padding:10px">
+      <li class="active" >Home</li>
+      <li>Book Review</li>
+      <li>Add Book</li>
+      <li>Categories</l1>
+      <!--<li><a href="#"></a></li>
+      <li><a href="#">Contact Us</a></li>-->
+    </ul>
+    <div style="padding:10px; float:right"  ng-controller="TabController as t">
+    <button type="button" class="btn btn-success btn-lg" > SignUp</button>
+    <button type="button" class="btn btn-info btn-lg" >Login</button></div>
+</nav>
+

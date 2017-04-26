@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" ng-app= "Signin">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="sign.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="sign.js"> </script>
+
+
+</script>
+
+</head>
+<body>
+
+<div class="container" >
+  
+  <h2>Button Styles</h2>
+
+  <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Signup</button>
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" ng-controller="TabController as t" >
+      <div >
+        <div class="modal-header" >
+
+         <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+       
+          <ul class="nav nav-pills" >
+
+             <li style="width:49%" ng-class="{ active:t.isSet(1) }"><a href ng-click="t.setTab(1)">Login</a></li>
+             <li style="width:49%" ng-class="{ active:t.isSet(2) }"><a href ng-click="t.setTab(2)"">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="modal-body" id="sign-in" ng-show="t.isSet(1)">
+           <div class="omb_login">
+      
+    <div class="row omb_row-sm-offset-3 omb_socialButtons">
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+              <i class="fa fa-facebook fa-2x"></i>
+             <span class="hidden-xs"></span>
+            </a>
+          </div>
+            
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-google">
+              <i class="fa fa-google-plus fa-2x"></i>
+            <span class="hidden-xs"></span>
+            </a>
+          </div>  
+    </div>
+
+    <div class="row omb_row-sm-offset-3 omb_loginOr">
+      <div class="col-xs-12 col-sm-6">
+        <hr class="omb_hrOr">
+        <span class="omb_spanOr">or</span>
+      </div>
+    </div>
+
+    <div class="row omb_row-sm-offset-2">
+      <div class="col-xs-12 col-sm-12">  
+          <form class="new_user" id="new_user" action="/users/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="J88DigwCGiPEi7y6LtZZ3l93ynkibFNEwceoB2j/aV9aKf0oEBYpQuEH08N0Su/UkPu1GA8Jz1Xi2wMmT+nrbA==" />
+      <input type="hidden" id="invite_code" name="user[invite_code]" value="">
+      <input type="hidden" id="user_timezone" name="user[timezone]">
+      
+
+      <div class="form-group">
+        <input id="user_email" name="user[email]" type="email" value="" class="form-control" placeholder="Email" required="">
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="username" name="user[username]" value="" class="form-control" placeholder="Username(only alphanumerics, hypen and dot)" required="">
+      </div>
+
+      <div class="form-group">
+        <input autocomplete="off" id="user_password" name="user[password]" type="password" class="form-control" placeholder="Password (8 characters minimum)"
+               pattern=".{8,}" required=""
+               title="Password must contain at least 8 characters."
+               onchange="form.user_password_confirmation.pattern = this.value;">
+      </div>
+      <div class="form-group">
+        <input autocomplete="off"
+               id="user_password_confirmation"
+               name="user[password_confirmation]"
+               type="password" pattern=".{8,}"
+               class="form-control"
+               placeholder="Retype Password"
+               required=""
+               title="Please enter the same Password as above.">
+      </div>
+      
+      <div>
+        <input name="commit" type="submit" value="Sign up" class="landing-page-btn user-btn">
+      </div>
+      <div class="clearfix"></div>
+</form>
+      </div>
+      </div>
+           
+  </div>
+        
+      </div>
+
+      <div class="clearfix"></div>
+</form>  <br/>
+ 
+        </div>
+        <div class="modal-body" id="sign-in" ng-show="t.isSet(2)">
+         <div class="omb_login">
+      
+    <div class="row omb_row-sm-offset-3 omb_socialButtons">
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+              <i class="fa fa-facebook fa-2x"></i>
+             <span class="hidden-xs"></span>
+            </a>
+          </div>
+            
+          <div class="col-xs-4 col-sm-3">
+            <a href="#" class="btn btn-lg btn-block omb_btn-google">
+              <i class="fa fa-google-plus fa-2x"></i>
+            <span class="hidden-xs"></span>
+            </a>
+          </div>  
+    </div>
+
+    <div class="row omb_row-sm-offset-3 omb_loginOr">
+      <div class="col-xs-12 col-sm-6">
+        <hr class="omb_hrOr">
+        <span class="omb_spanOr">or</span>
+      </div>
+    </div>
+
+    <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-12 col-sm-6">  
+          <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control" name="username" placeholder="email address">
+          </div>
+          <span class="help-block"></span>
+                    
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <input  type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+                    <span class="help-block">Password error</span>
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </form>
+      </div>
+      </div>
+    <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-12 col-sm-3">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me">Remember Me
+        </label>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <p class="omb_forgotPwd">
+          <a href="#">Forgot password?</a>
+        </p>
+      </div>
+    </div>        
+  </div>
+        </div>
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div> </div></div>
+  <!--
+  <button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button>  -->    
+</div>
+<script>
+//$( "button" ).click(function() {
+ // $().toggleClass( "highlight" );
+//});
+</script>
+
+</body>
+</html>
